@@ -9,7 +9,7 @@ class Pig extends BaseClass {
    //console.log(this.body.speed);
    if(this.body.speed < 3){
     super.display();
-   }
+   } 
    else{
      World.remove(world, this.body);
      push();
@@ -21,6 +21,10 @@ class Pig extends BaseClass {
    
  }
 
-
+score(){
+if(this.Visibility < 0 && this.Visibility > -1005){
+  score++;
+}
+ }
 
 };
