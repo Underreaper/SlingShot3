@@ -82,9 +82,9 @@ if(backgroundImg){
 }
 
 function mouseDragged(){
-    if (gameState!=="launched"){
+    //if (gameState!=="launched"){
         Matter.Body.setPosition(bird.body, {x: mouseX , y: mouseY});
-    }
+    //}
 }
 
 
@@ -94,8 +94,10 @@ function mouseReleased(){
 }
 
 function keyPressed(){
-    if(keyCode === 32){
-       // slingshot.attach(bird.body);
+    if(keyCode === 32 && bird.body.speed < 1){
+        bird.trajectory = [];
+        Matter.Body.setPosition(bird.body, {x: 200 , y: 50});
+        slingshot.attach(bird.body);
     }
 }
 
