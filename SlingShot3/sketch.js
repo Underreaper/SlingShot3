@@ -45,8 +45,6 @@ function draw(){
     textSize(25);
     text("Score:" + count, 1050,50);
 
-    score();
-
     Engine.update(engine);
     //strokeWeight(4);
   
@@ -68,6 +66,15 @@ function draw(){
 
     slingshot.display();
 
+    box1.score(); 
+    box2.score();
+    box3.score();
+    box4.score();
+    box5.score();
+    box6.score();
+    box7.score();
+    box8.score();
+    box9.score();
 }
 
 function mouseDragged(){
@@ -90,8 +97,3 @@ function keyPressed(){
     }
 }
 
-function score(){
-    if(box1.body.speed > 3 || box2.body.speed > 3 || box3.body.speed > 3 || box4.body.speed > 3 ||box5.body.speed > 3 || box6.body.speed > 3 || box7.body.speed > 3 || box8.body.speed > 3 || box9.body.speed > 3){
-      count = count + 100
-    }
-}
